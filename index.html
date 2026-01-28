@@ -43,7 +43,6 @@
         overflow-x: hidden;
       }
 
-      /* Smooth Scroll */
       html {
         scroll-behavior: smooth;
       }
@@ -162,7 +161,7 @@
         box-shadow: 0 10px 25px rgba(230, 126, 34, 0.2);
       }
 
-      /* Mobile Menu Button */
+      /* Mobile Menu */
       .mobile-menu-btn {
         display: none;
         flex-direction: column;
@@ -194,7 +193,6 @@
         transform: rotate(-45deg) translate(7px, -7px);
       }
 
-      /* Mobile Menu Overlay */
       .mobile-menu {
         display: none;
         position: fixed;
@@ -313,8 +311,6 @@
 
       .hero h1 .highlight {
         color: var(--blue);
-        position: relative;
-        display: inline-block;
       }
 
       .hero p {
@@ -497,16 +493,24 @@
         margin-bottom: 1.5rem;
       }
 
+      .service-card ul {
+        list-style: none;
+        color: var(--gray);
+        line-height: 2;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-card ul li:before {
+        content: "✓ ";
+        color: var(--blue);
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+
       .service-price {
         font-size: 1.75rem;
         color: var(--orange);
         font-weight: 700;
-      }
-
-      .service-price span {
-        font-size: 1rem;
-        color: var(--gray);
-        font-weight: 500;
       }
 
       /* Process Section */
@@ -855,7 +859,6 @@
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#process">Process</a></li>
-          <li><a href="/pricing.html">Pricing</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#contact" class="cta-btn">Get Started</a></li>
         </ul>
@@ -876,7 +879,6 @@
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Process</a></li>
-        <li><a href="/pricing.html">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#contact" class="cta-btn">Get Started</a></li>
       </ul>
@@ -934,68 +936,73 @@
     <section id="services" class="services">
       <div class="container">
         <div class="section-header">
-          <h2>Simple Pricing. No Surprises.</h2>
-          <p>Professional websites built fast, with optional monthly care.</p>
+          <h2>Simple, Honest Pricing</h2>
+          <p>
+            Choose the package that fits your needs. What you see is what you
+            get.
+          </p>
         </div>
-
         <div class="services-grid">
-          <!-- Launch -->
           <div class="service-card">
             <div class="service-icon">🚀</div>
-            <h3>Launch</h3>
-            <p>Perfect for new businesses that just need to get online.</p>
-            <ul style="color: var(--gray); line-height: 2">
-              <li>Single page website</li>
+            <h3>Template Site</h3>
+            <p>
+              Get online fast with our professional template. Perfect for
+              businesses that need a presence now.
+            </p>
+            <ul>
+              <li>Professional template design</li>
+              <li>Your business info plugged in</li>
+              <li>Contact form connected</li>
               <li>Mobile responsive</li>
-              <li>Contact form</li>
-              <li>1 revision round</li>
-              <li>1 month free hosting</li>
+              <li>Live in 48 hours</li>
             </ul>
             <div class="service-price">$500</div>
           </div>
 
-          <!-- Growth (Most Popular) -->
-          <div class="service-card" style="border-color: var(--orange)">
-            <div class="service-icon">⭐</div>
-            <h3>
-              Growth <span style="color: var(--orange)">(Most Popular)</span>
-            </h3>
-            <p>For businesses that want to look established and credible.</p>
-            <ul style="color: var(--gray); line-height: 2">
-              <li>Custom-designed website</li>
-              <li>SEO-ready structure</li>
-              <li>Google Business setup</li>
-              <li>Image optimization</li>
-              <li>2 revision rounds</li>
-              <li>3 months free hosting</li>
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Custom Design</h3>
+            <p>
+              Make it yours with custom colors, layout tweaks, and personalized
+              touches that match your brand.
+            </p>
+            <ul>
+              <li>Everything in Template</li>
+              <li>Custom color scheme</li>
+              <li>Layout adjustments</li>
+              <li>Your images & content</li>
+              <li>2 rounds of revisions</li>
             </ul>
-            <div class="service-price">$1,000</div>
+            <div class="service-price">$800</div>
           </div>
 
-          <!-- Authority -->
           <div class="service-card">
             <div class="service-icon">💎</div>
-            <h3>Authority</h3>
-            <p>For businesses competing in crowded markets.</p>
-            <ul style="color: var(--gray); line-height: 2">
-              <li>Conversion-focused copywriting</li>
-              <li>Premium stock photography</li>
-              <li>Custom section layouts</li>
-              <li>Priority support</li>
-              <li>6 months free hosting</li>
+            <h3>Full Custom</h3>
+            <p>
+              Completely customized website built from scratch to match your
+              exact vision.
+            </p>
+            <ul>
+              <li>Everything in Custom Design</li>
+              <li>Fully custom layout</li>
+              <li>Multiple pages</li>
+              <li>Additional features</li>
+              <li>Unlimited revisions</li>
             </ul>
-            <div class="service-price">$1,500</div>
+            <div class="service-price">$1,200+</div>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 3rem">
-          <p style="color: var(--gray); margin-bottom: 1rem">
-            Monthly hosting & website care plans available starting at
-            $50/month.
-          </p>
-          <a href="/pricing.html" class="btn btn-secondary"
-            >View Full Pricing Details</a
+          <p
+            style="color: var(--gray); margin-bottom: 1.5rem; font-size: 1.1rem"
           >
+            All packages include hosting setup & domain connection<br />Monthly
+            hosting available starting at $50/month
+          </p>
+          <a href="#contact" class="btn btn-primary">Get Your Free Quote</a>
         </div>
       </div>
     </section>
@@ -1020,8 +1027,7 @@
             <div class="step-number">2</div>
             <h3>Design</h3>
             <p>
-              We create your custom website and send you a preview within 24
-              hours.
+              We create your website and send you a preview within 24 hours.
             </p>
           </div>
           <div class="process-step">
@@ -1072,8 +1078,8 @@
               <div class="contact-details">
                 <h4>Email</h4>
                 <p>
-                  <a href="mailto:jmoore.digital@gmail.com"
-                    >jmoore.digital@gmail.com</a
+                  <a href="mailto:josi@jmooredigital.com"
+                    >josi@jmooredigital.com</a
                   >
                 </p>
               </div>
@@ -1082,16 +1088,14 @@
               <div class="contact-icon">📱</div>
               <div class="contact-details">
                 <h4>Phone</h4>
-                <p><a href="tel:4352303870">(435) 230-3870</a></p>
+                <p><a href="tel:5551234567">(555) 123-4567</a></p>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">🌐</div>
               <div class="contact-details">
                 <h4>Location</h4>
-                <p>
-                  Based in Ogden, Utah<br />Serving small businesses nationwide
-                </p>
+                <p>Based in Ogden, Utah<br />Serving businesses nationwide</p>
               </div>
             </div>
             <div class="contact-item">
@@ -1144,21 +1148,22 @@
           </div>
           <p style="margin-top: 1rem">
             Professional website design for small businesses nationwide. Fast,
-            affordable, and built to grow your business.
+            affordable, and built to help your business grow.
           </p>
         </div>
         <div class="footer-section">
           <h3>Services</h3>
           <ul class="footer-links">
-            <li><a href="#services">Website Design</a></li>
-            <li><a href="#services">Website Hosting</a></li>
-            <li><a href="#services">Website Maintenance</a></li>
+            <li><a href="#services">Template Sites - $500</a></li>
+            <li><a href="#services">Custom Design - $800</a></li>
+            <li><a href="#services">Full Custom - $1,200+</a></li>
+            <li><a href="#services">Monthly Hosting - $50+</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="#services">Pricing</a></li>
             <li><a href="#process">Our Process</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#contact">Get Started</a></li>
@@ -1168,11 +1173,9 @@
           <h3>Connect</h3>
           <ul class="footer-links">
             <li>
-              <a href="mailto:jmoore.digital@gmail.com"
-                >jmoore.digital@gmail.com</a
-              >
+              <a href="mailto:josi@jmooredigital.com">josi@jmooredigital.com</a>
             </li>
-            <li><a href="tel:4352303870">(435) 230-3870</a></li>
+            <li><a href="tel:5551234567">(555) 123-4567</a></li>
           </ul>
         </div>
       </div>
