@@ -8,6 +8,38 @@
       name="description"
       content="Professional, affordable website design for small businesses nationwide. Get your business online in just 48 hours starting at $500."
     />
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./logos/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./logos/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./logos/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./logos/favicon/site.webmanifest" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./logos/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="./logos/favicon/android-chrome-512x512.png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,13 +49,20 @@
 
     <style>
       :root {
-        --navy: #2c3e50;
-        --blue: #3498db;
-        --orange: #e67e22;
-        --gray: #95a5a6;
-        --light: #ecf0f1;
+        --cream: #f5f1ea;
+        --cream-light: #faf8f5;
+        --beige: #e8dfd3;
+        --sand: #d4c4b0;
+        --taupe: #a89885;
+        --mocha: #5c4d3f;
+        --charcoal: #3d3530;
+        --espresso: #2b2622;
+        --terracotta: #c4906a;
+        --rust: #a6785d;
         --white: #ffffff;
-        --dark: #1a252f;
+        --text-primary: var(--charcoal);
+        --text-secondary: var(--mocha);
+        --text-light: var(--taupe);
       }
 
       * {
@@ -38,7 +77,8 @@
           -apple-system,
           BlinkMacSystemFont,
           sans-serif;
-        color: var(--navy);
+        background: var(--cream);
+        color: var(--text-primary);
         line-height: 1.6;
         overflow-x: hidden;
       }
@@ -52,16 +92,17 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background: var(--navy);
         z-index: 1000;
         padding: 1.5rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(245, 241, 234, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--beige);
         transition: all 0.3s ease;
       }
 
       nav.scrolled {
         padding: 1rem 0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 20px rgba(61, 53, 48, 0.1);
       }
 
       nav .container {
@@ -75,7 +116,7 @@
 
       .logo {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         text-decoration: none;
         transition: transform 0.3s ease;
       }
@@ -88,21 +129,9 @@
         display: none !important;
       }
 
-      .logo-main {
-        font-family: "Great Vibes", cursive;
-        font-size: 2rem;
-        color: white;
-        line-height: 1;
-      }
-
-      .logo-sub {
-        font-size: 0.5rem;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        font-weight: 600;
-        color: white;
-        margin-top: 0.2rem;
-        text-align: center;
+      .logo img {
+        height: 100px;
+        width: auto;
       }
 
       nav ul {
@@ -114,7 +143,7 @@
 
       nav ul li a {
         text-decoration: none;
-        color: white;
+        color: var(--text-secondary);
         font-weight: 500;
         font-size: 0.95rem;
         position: relative;
@@ -122,7 +151,7 @@
       }
 
       nav ul li a:hover {
-        color: var(--orange);
+        color: var(--terracotta);
       }
 
       nav ul li a::after {
@@ -132,7 +161,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: var(--orange);
+        background: var(--terracotta);
         transition: width 0.3s ease;
       }
 
@@ -141,13 +170,13 @@
       }
 
       .cta-btn {
-        background: var(--orange);
-        color: white !important;
+        background: var(--charcoal);
+        color: var(--cream) !important;
         padding: 0.75rem 1.75rem;
         border-radius: 50px;
         font-weight: 600;
         transition: all 0.3s ease;
-        border: 2px solid var(--orange);
+        border: 2px solid var(--charcoal);
       }
 
       .cta-btn::after {
@@ -155,10 +184,10 @@
       }
 
       .cta-btn:hover {
-        background: white;
-        color: var(--orange) !important;
+        background: transparent;
+        color: var(--charcoal) !important;
         transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(230, 126, 34, 0.2);
+        box-shadow: 0 10px 25px rgba(61, 53, 48, 0.15);
       }
 
       /* Mobile Menu */
@@ -176,7 +205,7 @@
       .mobile-menu-btn span {
         width: 28px;
         height: 3px;
-        background: white;
+        background: var(--charcoal);
         border-radius: 2px;
         transition: all 0.3s ease;
       }
@@ -200,7 +229,7 @@
         right: -100%;
         width: 280px;
         height: 100vh;
-        background: var(--navy);
+        background: var(--espresso);
         z-index: 999;
         padding: 100px 2rem 2rem;
         transition: right 0.3s ease;
@@ -219,7 +248,7 @@
       }
 
       .mobile-menu ul li a {
-        color: white;
+        color: var(--cream);
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: 500;
@@ -229,13 +258,15 @@
       }
 
       .mobile-menu ul li a:hover {
-        color: var(--orange);
+        color: var(--terracotta);
       }
 
       .mobile-menu .cta-btn {
         margin-top: 1rem;
         display: block;
         text-align: center;
+        background: var(--terracotta);
+        border-color: var(--terracotta);
       }
 
       /* Hero Section */
@@ -244,7 +275,14 @@
         min-height: 90vh;
         display: flex;
         align-items: center;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        background:
+          linear-gradient(
+            135deg,
+            rgba(245, 241, 234, 0.95) 0%,
+            rgba(245, 241, 234, 0.92) 100%
+          ),
+          url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1600&q=80")
+            center/cover no-repeat;
         position: relative;
         overflow: hidden;
         padding: 4rem 0;
@@ -259,7 +297,7 @@
         height: 800px;
         background: radial-gradient(
           circle,
-          rgba(52, 152, 219, 0.08) 0%,
+          rgba(196, 144, 106, 0.08) 0%,
           transparent 70%
         );
         border-radius: 50%;
@@ -283,39 +321,34 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
+        display: flex;
+        justify-content: center;
         align-items: center;
         position: relative;
         z-index: 1;
       }
 
-      @media (max-width: 968px) {
-        .hero .container {
-          grid-template-columns: 1fr;
-        }
-      }
-
       .hero-content {
         animation: fadeInUp 1s ease-out;
+        text-align: center;
+        max-width: 800px;
       }
 
       .hero h1 {
         font-size: 3.5rem;
         font-weight: 700;
-        color: var(--navy);
+        color: var(--espresso);
         line-height: 1.2;
         margin-bottom: 1.5rem;
       }
 
       .hero h1 .highlight {
-        color: var(--blue);
+        color: var(--terracotta);
       }
 
       .hero p {
         font-size: 1.25rem;
-        color: var(--gray);
+        color: var(--text-secondary);
         margin-bottom: 2.5rem;
         line-height: 1.8;
       }
@@ -324,6 +357,7 @@
         display: flex;
         gap: 1.5rem;
         flex-wrap: wrap;
+        justify-content: center;
       }
 
       .btn {
@@ -340,47 +374,36 @@
       }
 
       .btn-primary {
-        background: var(--orange);
-        color: white;
-        border-color: var(--orange);
+        background: var(--charcoal);
+        color: var(--cream);
+        border-color: var(--charcoal);
       }
 
       .btn-primary:hover {
-        background: white;
-        color: var(--orange);
-        border-color: var(--orange);
+        background: transparent;
+        color: var(--charcoal);
+        border-color: var(--charcoal);
         transform: translateY(-3px);
-        box-shadow: 0 15px 35px rgba(230, 126, 34, 0.25);
+        box-shadow: 0 15px 35px rgba(61, 53, 48, 0.2);
       }
 
       .btn-secondary {
         background: transparent;
-        color: var(--navy);
-        border-color: var(--navy);
+        color: var(--charcoal);
+        border-color: var(--charcoal);
       }
 
       .btn-secondary:hover {
-        background: var(--navy);
-        color: white;
+        background: var(--charcoal);
+        color: var(--cream);
         transform: translateY(-3px);
-        box-shadow: 0 15px 35px rgba(44, 62, 80, 0.2);
-      }
-
-      .hero-image {
-        position: relative;
-        animation: fadeInRight 1s ease-out 0.3s backwards;
-      }
-
-      .hero-image img {
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 15px 35px rgba(61, 53, 48, 0.2);
       }
 
       /* Stats Bar */
       .stats {
-        background: var(--navy);
-        color: white;
+        background: var(--espresso);
+        color: var(--cream);
         padding: 3rem 2rem;
       }
 
@@ -400,20 +423,20 @@
       .stat-number {
         font-size: 3rem;
         font-weight: 700;
-        color: var(--orange);
+        color: var(--terracotta);
         margin-bottom: 0.5rem;
       }
 
       .stat-label {
         font-size: 0.95rem;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(245, 241, 234, 0.8);
         font-weight: 500;
       }
 
       /* Services Section */
       .services {
         padding: 6rem 2rem;
-        background: white;
+        background: var(--white);
       }
 
       .container {
@@ -429,14 +452,14 @@
 
       .section-header h2 {
         font-size: 2.5rem;
-        color: var(--navy);
+        color: var(--espresso);
         margin-bottom: 1rem;
         font-weight: 700;
       }
 
       .section-header p {
         font-size: 1.2rem;
-        color: var(--gray);
+        color: var(--text-light);
         max-width: 600px;
         margin: 0 auto;
       }
@@ -448,7 +471,7 @@
       }
 
       .service-card {
-        background: var(--light);
+        background: var(--cream-light);
         padding: 2.5rem;
         border-radius: 16px;
         transition: all 0.4s ease;
@@ -458,15 +481,15 @@
 
       .service-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border-color: var(--blue);
-        background: white;
+        box-shadow: 0 20px 40px rgba(61, 53, 48, 0.12);
+        border-color: var(--sand);
+        background: var(--white);
       }
 
       .service-icon {
         width: 70px;
         height: 70px;
-        background: linear-gradient(135deg, var(--blue), var(--orange));
+        background: linear-gradient(135deg, var(--sand), var(--rust));
         border-radius: 16px;
         display: flex;
         align-items: center;
@@ -482,41 +505,41 @@
 
       .service-card h3 {
         font-size: 1.5rem;
-        color: var(--navy);
+        color: var(--espresso);
         margin-bottom: 1rem;
         font-weight: 700;
       }
 
       .service-card p {
-        color: var(--gray);
+        color: var(--text-secondary);
         line-height: 1.8;
         margin-bottom: 1.5rem;
       }
 
       .service-card ul {
         list-style: none;
-        color: var(--gray);
+        color: var(--text-secondary);
         line-height: 2;
         margin-bottom: 1.5rem;
       }
 
       .service-card ul li:before {
         content: "✓ ";
-        color: var(--blue);
+        color: var(--terracotta);
         font-weight: bold;
         margin-right: 0.5rem;
       }
 
       .service-price {
         font-size: 1.75rem;
-        color: var(--orange);
+        color: var(--terracotta);
         font-weight: 700;
       }
 
       /* Process Section */
       .process {
         padding: 6rem 2rem;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        background: var(--cream);
       }
 
       .process-steps {
@@ -535,8 +558,8 @@
       .step-number {
         width: 80px;
         height: 80px;
-        background: linear-gradient(135deg, var(--blue), var(--orange));
-        color: white;
+        background: linear-gradient(135deg, var(--beige), var(--terracotta));
+        color: var(--white);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -544,26 +567,26 @@
         font-size: 2rem;
         font-weight: 700;
         margin: 0 auto 1.5rem;
-        box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+        box-shadow: 0 10px 30px rgba(196, 144, 106, 0.3);
       }
 
       .process-step h3 {
         font-size: 1.25rem;
-        color: var(--navy);
+        color: var(--espresso);
         margin-bottom: 1rem;
         font-weight: 700;
       }
 
       .process-step p {
-        color: var(--gray);
+        color: var(--text-secondary);
         line-height: 1.7;
       }
 
       /* CTA Section */
       .cta-section {
         padding: 5rem 2rem;
-        background: var(--navy);
-        color: white;
+        background: var(--espresso);
+        color: var(--cream);
         text-align: center;
       }
 
@@ -585,7 +608,7 @@
       /* Contact Section */
       .contact {
         padding: 6rem 2rem;
-        background: white;
+        background: var(--white);
       }
 
       .contact-content {
@@ -601,7 +624,7 @@
 
       .contact-info h3 {
         font-size: 1.75rem;
-        color: var(--navy);
+        color: var(--espresso);
         margin-bottom: 1.5rem;
         font-weight: 700;
       }
@@ -616,7 +639,7 @@
       .contact-icon {
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, var(--blue), var(--orange));
+        background: linear-gradient(135deg, var(--beige), var(--terracotta));
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -626,23 +649,23 @@
       }
 
       .contact-details h4 {
-        color: var(--navy);
+        color: var(--espresso);
         margin-bottom: 0.5rem;
         font-weight: 600;
       }
 
       .contact-details p {
-        color: var(--gray);
+        color: var(--text-secondary);
       }
 
       .contact-details a {
-        color: var(--blue);
+        color: var(--rust);
         text-decoration: none;
         transition: color 0.3s;
       }
 
       .contact-details a:hover {
-        color: var(--orange);
+        color: var(--terracotta);
       }
 
       .contact-form {
@@ -656,7 +679,7 @@
       .form-group label {
         display: block;
         margin-bottom: 0.5rem;
-        color: var(--navy);
+        color: var(--espresso);
         font-weight: 600;
         font-size: 0.95rem;
       }
@@ -665,20 +688,20 @@
       .form-group textarea {
         width: 100%;
         padding: 1rem 1.25rem;
-        border: 2px solid var(--light);
+        border: 2px solid var(--beige);
         border-radius: 12px;
         font-family: inherit;
         font-size: 1rem;
         transition: all 0.3s ease;
-        background: var(--light);
+        background: var(--cream-light);
       }
 
       .form-group input:focus,
       .form-group textarea:focus {
         outline: none;
-        border-color: var(--blue);
-        background: white;
-        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+        border-color: var(--taupe);
+        background: var(--white);
+        box-shadow: 0 5px 15px rgba(168, 152, 133, 0.1);
       }
 
       .form-group textarea {
@@ -689,8 +712,8 @@
       .submit-btn {
         width: 100%;
         padding: 1.25rem;
-        background: var(--orange);
-        color: white;
+        background: var(--terracotta);
+        color: var(--white);
         border: none;
         border-radius: 12px;
         font-size: 1.1rem;
@@ -700,15 +723,15 @@
       }
 
       .submit-btn:hover {
-        background: var(--navy);
+        background: var(--espresso);
         transform: translateY(-3px);
-        box-shadow: 0 15px 35px rgba(44, 62, 80, 0.2);
+        box-shadow: 0 15px 35px rgba(43, 38, 34, 0.2);
       }
 
       /* Footer */
       footer {
-        background: var(--dark);
-        color: white;
+        background: var(--espresso);
+        color: var(--sand);
         padding: 3rem 2rem 1.5rem;
       }
 
@@ -724,19 +747,11 @@
       .footer-section h3 {
         margin-bottom: 1.5rem;
         font-size: 1.25rem;
-      }
-
-      .footer-logo .logo-main {
-        color: white;
-        font-size: 2.5rem;
-      }
-
-      .footer-logo .logo-sub {
-        color: rgba(255, 255, 255, 0.7);
+        color: var(--cream);
       }
 
       .footer-section p {
-        color: rgba(255, 255, 255, 0.7);
+        color: var(--sand);
         line-height: 1.8;
       }
 
@@ -749,22 +764,22 @@
       }
 
       .footer-links a {
-        color: rgba(255, 255, 255, 0.7);
+        color: var(--sand);
         text-decoration: none;
         transition: color 0.3s;
       }
 
       .footer-links a:hover {
-        color: var(--orange);
+        color: var(--terracotta);
       }
 
       .footer-bottom {
         max-width: 1200px;
         margin: 0 auto;
         padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(212, 196, 176, 0.2);
         text-align: center;
-        color: rgba(255, 255, 255, 0.5);
+        color: var(--taupe);
       }
 
       /* Animations */
@@ -853,8 +868,7 @@
     <nav id="navbar">
       <div class="container">
         <a href="#" class="logo">
-          <span class="logo-main">J.Moore</span>
-          <span class="logo-sub">DIGITAL</span>
+          <img src="./logos/espresso.svg" alt="J.Moore Digital" />
         </a>
         <ul>
           <li><a href="#services">Services</a></li>
@@ -901,12 +915,6 @@
             <a href="#services" class="btn btn-secondary">View Packages</a>
           </div>
         </div>
-        <div class="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-            alt="Web Design"
-          />
-        </div>
       </div>
     </section>
 
@@ -944,8 +952,8 @@
         </div>
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon">🚀</div>
-            <h3>Template Site</h3>
+            <div class="service-icon">✜</div>
+            <h3>Essentials Site</h3>
             <p>
               Get online fast with our professional template. Perfect for
               businesses that need a presence now.
@@ -961,14 +969,14 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon">⚡</div>
-            <h3>Custom Design</h3>
+            <div class="service-icon">✦</div>
+            <h3>Signature</h3>
             <p>
               Make it yours with custom colors, layout tweaks, and personalized
               touches that match your brand.
             </p>
             <ul>
-              <li>Everything in Template</li>
+              <li>Everything in Essentials</li>
               <li>Custom color scheme</li>
               <li>Layout adjustments</li>
               <li>Your images & content</li>
@@ -978,14 +986,14 @@
           </div>
 
           <div class="service-card">
-            <div class="service-icon">💎</div>
-            <h3>Full Custom</h3>
+            <div class="service-icon">✶</div>
+            <h3>Premium</h3>
             <p>
               Completely customized website built from scratch to match your
               exact vision.
             </p>
             <ul>
-              <li>Everything in Custom Design</li>
+              <li>Everything in Signature</li>
               <li>Fully custom layout</li>
               <li>Multiple pages</li>
               <li>Additional features</li>
@@ -997,7 +1005,11 @@
 
         <div style="text-align: center; margin-top: 3rem">
           <p
-            style="color: var(--gray); margin-bottom: 1.5rem; font-size: 1.1rem"
+            style="
+              color: var(--text-light);
+              margin-bottom: 1.5rem;
+              font-size: 1.1rem;
+            "
           >
             All packages include hosting setup & domain connection<br />Monthly
             hosting available starting at $50/month
@@ -1057,7 +1069,7 @@
         <a
           href="#contact"
           class="btn btn-primary"
-          style="background: var(--orange); border-color: var(--orange)"
+          style="background: var(--terracotta); border-color: var(--terracotta)"
           >Start Your Project Today</a
         >
       </div>
@@ -1074,32 +1086,32 @@
           <div class="contact-info">
             <h3>Get In Touch</h3>
             <div class="contact-item">
-              <div class="contact-icon">📧</div>
+              <div class="contact-icon">✉︎</div>
               <div class="contact-details">
                 <h4>Email</h4>
                 <p>
-                  <a href="mailto:josi@jmooredigital.com"
-                    >josi@jmooredigital.com</a
+                  <a href="mailto:jmoore.digital@gmail.com"
+                    >jmoore.digital@gmail.com</a
                   >
                 </p>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">📱</div>
+              <div class="contact-icon">☏</div>
               <div class="contact-details">
                 <h4>Phone</h4>
-                <p><a href="tel:5551234567">(555) 123-4567</a></p>
+                <p><a href="tel:4352303870">(435) 230-3870</a></p>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">🌐</div>
+              <div class="contact-icon">⌖</div>
               <div class="contact-details">
                 <h4>Location</h4>
                 <p>Based in Ogden, Utah<br />Serving businesses nationwide</p>
               </div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">⏰</div>
+              <div class="contact-icon">⌚︎</div>
               <div class="contact-details">
                 <h4>Response Time</h4>
                 <p>Within 24 hours<br />Monday - Friday, 9am - 6pm MT</p>
@@ -1142,10 +1154,9 @@
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <div class="footer-logo logo">
-            <span class="logo-main">J.Moore</span>
-            <span class="logo-sub">DIGITAL</span>
-          </div>
+          <a href="#" class="logo">
+            <img src="./logos/cream.svg" alt="J.Moore Digital" />
+          </a>
           <p style="margin-top: 1rem">
             Professional website design for small businesses nationwide. Fast,
             affordable, and built to help your business grow.
@@ -1154,9 +1165,9 @@
         <div class="footer-section">
           <h3>Services</h3>
           <ul class="footer-links">
-            <li><a href="#services">Template Sites - $500</a></li>
-            <li><a href="#services">Custom Design - $800</a></li>
-            <li><a href="#services">Full Custom - $1,200+</a></li>
+            <li><a href="#services">Essentials Site - $500</a></li>
+            <li><a href="#services">Signature Site - $800</a></li>
+            <li><a href="#services">Premium Site - $1,200+</a></li>
             <li><a href="#services">Monthly Hosting - $50+</a></li>
           </ul>
         </div>
@@ -1173,9 +1184,11 @@
           <h3>Connect</h3>
           <ul class="footer-links">
             <li>
-              <a href="mailto:josi@jmooredigital.com">josi@jmooredigital.com</a>
+              <a href="mailto:jmoore.digital@gmail.com"
+                >jmoore.digital@gmail.com</a
+              >
             </li>
-            <li><a href="tel:5551234567">(555) 123-4567</a></li>
+            <li><a href="tel:4352303870">(435) 230-3870</a></li>
           </ul>
         </div>
       </div>
@@ -1186,7 +1199,6 @@
         </p>
       </div>
     </footer>
-
     <script>
       // Mobile menu toggle
       const mobileMenuBtn = document.getElementById("mobileMenuBtn");
@@ -1198,7 +1210,6 @@
           mobileMenu.classList.toggle("active");
         });
 
-        // Close mobile menu when clicking a link
         document.querySelectorAll(".mobile-menu a").forEach((link) => {
           link.addEventListener("click", () => {
             mobileMenuBtn.classList.remove("active");
@@ -1206,7 +1217,6 @@
           });
         });
 
-        // Close mobile menu when clicking outside
         document.addEventListener("click", (e) => {
           if (
             !mobileMenu.contains(e.target) &&
@@ -1218,7 +1228,6 @@
         });
       }
 
-      // Navbar scroll effect
       window.addEventListener("scroll", () => {
         const navbar = document.getElementById("navbar");
         if (window.scrollY > 50) {
@@ -1228,7 +1237,6 @@
         }
       });
 
-      // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -1242,7 +1250,6 @@
         });
       });
 
-      // Intersection Observer for animations
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
